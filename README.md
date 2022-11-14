@@ -1,1 +1,67 @@
-# gedesuranadi.github.io
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Gede Suranadi</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Epilogue' rel='stylesheet'>
+
+ 
+  <link href="assets/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/bootstrap-5.0.2/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <script type = "text/javascript" src="assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+  <script type = "text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
+  <link href="assets/style.css" rel="stylesheet">
+  <script type = "text/javascript" src="assets/script.js"></script> 
+  
+</head>
+
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-bg fixed-top">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="resume.html">Resume</a>
+                  <a class="nav-link" href="#">Portfolio</a> 
+                  <a class="nav-link disabled" href="#">Blogs</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+</header>
+<body>
+        <div class="home-text-container">
+            <h5 class="home-text">
+                Engineer, Data and AI Enthusiast, Web Developer
+            </h5>
+            <h1 class="home-text-lg">
+                GEDE SURANADI
+            </h1>
+            <div class="social-links" style="text-align: center; font-size:25px;">
+              <a href="https://twitter.com/GedeSuranadi" target="_blank"><i class="bi bi-twitter home-social-link"></i></a>
+              <a href="https://www.instagram.com/gedesuranadi/" target="_blank"><i class="bi bi-instagram home-social-link"></i></a>
+              <a href="mailto:gedesuranadi@ugm.mail.ac.id" target="_blank"><i class="bi bi-envelope home-social-link"></i></a>
+              <a href="https://www.linkedin.com/in/gedesuranadi/" target="_blank"><i class="bi bi-linkedin home-social-link"></i></a>
+            </div>
+          </div>
+
+</body>
+
+</html>
