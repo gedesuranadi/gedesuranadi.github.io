@@ -39,7 +39,7 @@
                 <div class="navbar-nav">
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                   <a class="nav-link" href="resume.html">Resume</a>
-                  <a class="nav-link" href="#">Portfolio</a> 
+                  <a class="nav-link" href="portfolio.html">Portfolio</a> 
                   <a class="nav-link" href="Blogs/index.html">Blogs</a>
                 </div>
               </div>
