@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Gede Suranadi's Blogs</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS Files -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="">
+        </a>
+  
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html">Blogs</a></li>
+            <li><a href="https://gedesuranadi.github.io/index.html">About</a></li>
+          </ul>
+        </nav><!-- .navbar -->
+  
+        <div class="position-relative">
+          <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
+          <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
+          <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
+          <a href="#" class="js-search-open"></a>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+  
+          <!-- ======= Search Form ======= -->
+          <div class="search-form-wrap js-search-form-wrap">
+            <form action="search-result.html" class="search-form">
+              <span class="icon bi-search"></span>
+              <input type="text" placeholder="Search" class="form-control">
+              <button class="btn js-search-close"><span class="bi-x"></span></button>
+            </form>
+          </div><!-- End Search Form -->
+  
+        </div>
+  
+      </div>
+  
+    </header><!-- End Header -->
+  <main id="main">
+
+    <section class="single-post-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 post-content" data-aos="fade-up">
+
+            <!-- ======= Single Post Content ======= -->
+            <div class="single-post content-bg">
+              <div class="post-meta"><span class="date">Artificial Intelligence</span> <span class="mx-1">&bullet;</span> <span>December 8th, 2022</span></div>
+              <h1 class="mb-5">MobileNet-v1, MobileNet-v2, dan MobileNet-v3 [Brief Note]</h1>
+              <p style="text-align: justify; font-size: large;"><span class="firstcharacter">S</span>ejak tahun 2017, Google telah berturut-turut mengusulkan beberapa model, seperti MobileNetV1 [1], MobileNetV2 [2] dan
+                MobileNetV3 [3]. Model - model tersebut telah mencapai akurasi tinggi pada dataset ImageNet dan sering digunakan untuk
+                mendeteksi dan mengenali objek. MobileNetV1 dapat digunakan sebagai jaringan dasar yang efektif dalam sistem deteksi objek
+                modern [1]. Howard, dkk. melaporkan hasil MobileNet yang dilatih untuk deteksi objek pada data COCO berdasarkan karya
+                terbaru yang memenangkan tantangan COCO 2016 dan membandingkannya dengan VGG dan Inception V2 di bawah kerangka Faster-RCNN
+                dan SSD [1]. Dalam percobaan tersebut, SSD dievaluasi dengan resolusi input 300 (SSD 300) dan Faster-RCNN dievaluasi dengan
+                resolusi input 300 dan 600 (Faster-RCNN 300 dan Faster-RCNN 600). Model dilatih pada COCO train & val tidak termasuk gambar
+                minival 8k. Untuk kedua kerangka kerja, MobileNet mencapai hasil yang sebanding dengan jaringan lain walaupun kompleksitas
+                komputasi dan ukuran model cenderung lebih sederhana dan kecil. </p>
+  
+                <img src="assets/img/blogs-001.jpg" alt="" class="img-fluid">
+              
+              <p style="text-align: justify; font-size: large;">Pada tahun 2018, M. Sandler, dkk. melatih model MobileNetV2 untuk klasifikasi pada ImageNet menggunakan TensorFlow dan
+                RMSPropOptimizer standar dengan peluruhan dan momentum yang disetel ke 0,9 [2]. Selain itu, peneliti menggunakan normalisasi
+                batch setelah setiap lapisan dan penurunan berat standar (standard weight decay) diatur ke 0,00004. Setelah itu, peneliti
+                menggunakan tingkat pembelajaran awal (initial learning rate) 0,045, dan tingkat peluruhan tingkat pembelajaran (learning
+                rate decay) 0,98 per epoch. Peneliti menggunakan 16 GPU asinkron dan ukuran batch 96. Peneliti membandingkan hasil jaringan
+                MobileNetV2 dengan model MobileNetV1, ShuffleNet dan NASNet-A. MobiletNetV2 memiliki akurasi tertinggi, 74,7%, dibandingkan
+                jaringan lain [2]. Selain itu, M. Sandler, dkk. juga mengevaluasi dan membandingkan kinerja MobileNetV2 dan MobileNetV1
+                sebagai ekstraktor fitur untuk deteksi objek dengan versi modifikasi dari Single Shot Detector (SSD) pada dataset COCO [2].
+                Peniliti juga membandingkan dengan YOLOv2 dan SSD asli (dengan VGG-16 sebagai jaringan dasar) sebagai baseline. Untuk 
+                MobileNetV1, peneliti mengikuti pengaturan yang ada pada jurnal yang disusun oleh Jonathan Huang, dkk [4]. Untuk MobileNetV2,
+                lapisan pertama SSDLite dilampirkan ke perluasan lapisan 15 (dengan langkah keluaran 16). SSDLite adalah varian lain dari 
+                SSD biasa. Peneliti mengganti semua konvolusi reguler dengan konvolusi yang dapat dipisahkan di lapisan prediksi SSD. 
+                Desain SSDLite sejalan dengan desain keseluruhan MobileNets dan terlihat jauh lebih efisien secara komputasi. 
+                Lapisan kedua dan lapisan SSDLite lainnya dipasang di atas lapisan terakhir (dengan langkah keluaran 32). Pengaturan ini
+                konsisten dengan MobileNetV1 karena semua lapisan dilampirkan ke peta fitur dari langkah keluaran yang sama. Kedua model
+                MobileNet dilatih dan dievaluasi dengan Open Source TensorFlow Object Detection API. Resolusi input kedua model adalah 320 x
+                320. Peneliti membandingkan mAP (COCO challenge metrics), jumlah parameter, dan jumlah Multiply-Adds. Hasilnya,
+                MobileNetV2 SSDLite bukan hanya model yang paling efisien, tetapi juga yang paling akurat dari ketiganya. Khususnya,
+                MobileNetV2 SSDLite 20 kali lebih efisien dan 10 kali lebih kecil mengungguli YOLOv2 pada dataset COCO [2].</p>
+              <p style="text-align: justify; font-size: large;">Pada tahun 2019, Howard, dkk. melakukan percobaan menggunakan model MobileNetV3 untuk klasifikasi, deteksi objek dan
+                segmentasi [3]. MobileNetV3 didefinisikan sebagai dua model: MobileNetV3-Large dan MobileNetV3-Small. Model-model tersebut
+                masing-masing ditargetkan pada kasus yang membutuhkan sumber daya tinggi dan rendah. Model dibuat melalui penerapan
+                platform-aware NAS dan NetAdapt. Peneliti menggunakan ImageNet untuk eksperimen klasifikasi. Howard, dkk. melatih
+                model pada Pod TPU 4x4 menggunakan tensorflow RMSPropOptimizer standar dengan momentum 0,9. Peneliti juga menggunakan
+                tingkat pembelajaran awal (initial learning rate) 0,1, ukuran batch 4096 (128 gambar per chip), tingkat peluruhan tingkat
+                pembelajaran (learning rate decay) 0,01 setiap 3 epoch, menggunakan dropout 0,8, weight decay 1e-5 dan preprocessing gambar
+                yang sama seperti Inception. Semua lapisan konvolusi menggunakan lapisan normalisasi batch (batch-normalization layers)
+                dengan peluruhan rata-rata 0,99. Untuk mengukur latensi, peneliti menggunakan ponsel Google Pixel standar dan menjalankan
+                semua jaringan melalui Alat Tolok Ukur TFLite (TFLite Benchmark Tool) standar. Hasil eksperimen klasifikasi menunjukan bahwa
+                model MobileNetV3 mengungguli model yang ada saat ini seperti MnasNet, ProxylessNas dan MobileNetV2. MobileNetV3-Small
+                mengungguli MobileNetV3-Large dengan multiplier yang diskalakan agar sesuai dengan kinerja hampir 3%. Di sisi lain,
+                resolusi memberikan trade-off yang lebih baik daripada multiplier [3]. Untuk deteksi objek, Howard, dkk. menggunakan
+                MobileNetV3 sebagai pengganti drop-in untuk ekstraktor fitur tulang punggung (backbone) di SSDLite dan membandingkan
+                dengan jaringan lain pada dataset COCO. Mengikuti MobileNetV2, peneliti memasukan lapisan pertama SSDLite ke lapisan
+                pengekstrak fitur (feature extractor layer) terakhir yang memiliki langkah keluaran 16, dan memasang lapisan kedua SSDLite
+                ke lapisan pengekstrak fitur (feature extractor layer) terakhir yang memiliki langkah keluaran 32. Peneliti menyebut lapisan
+                - lapisan tersebut sebagai C4 dan C5. Untuk MobileNetV3-Large, C4 adalah lapisan ekspansi dari blok bottleneck ke-13.
+                Untuk MobileNetV3-Small, C4 adalah lapisan ekspansi dari blok bottleneck ke-9. Untuk kedua jaringan, C5 adalah lapisan
+                sesaat sebelum penyatuan. Peneliti juga mengurangi jumlah saluran dari semua lapisan fitur antara C4 dan C5 sebanyak 2
+                saluran. Howard, dkk. menjelaskan bahwa hal tersebut karena beberapa lapisan terakhir MobileNetV3 diatur untuk menghasilkan
+                1000 kelas yang mungkin berlebihan saat ditransfer ke COCO dengan 90 kelas. Hasil eksperimen deteksi objek menunjukan bahwa
+                dengan pengurangan saluran, MobileNetV3-Large 27% lebih cepat dari MobileNetV2 dengan mAP yang hampir identik.
+                MobileNetV3-Small, dengan pengurangan saluran, 35% lebih cepat dari MobileNetV2 dan MnasNet dengan mAP 2,4 dan 0,5 mAP
+                lebih rendah. Untuk kedua model MobileNetV3, pengurangan saluran berkontribusi pada pengurangan latensi sekitar 15% tanpa
+                kehilangan mAP [3].</p>
+                <div class="bibliography">
+                  <p>[1]	A. G. Howard et al., “MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications,” ArXiv170404861 Cs, Apr. 2017, Accessed: Dec. 23, 2021. [Online]. Available: http://arxiv.org/abs/1704.04861</p>
+                  <p>[2]	M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, and L.-C. Chen, “MobileNetV2: Inverted Residuals and Linear Bottlenecks,” in 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition, Salt Lake City, UT, Jun. 2018, pp. 4510–4520. doi: 10.1109/CVPR.2018.00474.</p>
+                  <p>[3]	A. Howard et al., “Searching for MobileNetV3,” in 2019 IEEE/CVF International Conference on Computer Vision (ICCV), Seoul, Korea (South), Oct. 2019, pp. 1314–1324. doi: 10.1109/ICCV.2019.00140.</p>
+                  <p>[4]	J. Huang et al., “Speed/accuracy trade-offs for modern convolutional object detectors,” ArXiv161110012 Cs, Apr. 2017, Accessed: Dec. 24, 2021. [Online]. Available: http://arxiv.org/abs/1611.10012.</p>
+                </div>
+            </div><!-- End Single Post Content -->
+
+
+          </div>
+          <div class="col-md-3">
+            <!-- ======= Sidebar ======= -->
+            <div class="aside-block">
+
+              <div class="tab-content" id="pills-tabContent">
+
+                <!-- List Content -->
+                <div class="tab-pane fade show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
+                  <div class="post-entry-1 border-bottom">
+                    <div class="post-meta"><span class="date">Sport</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">How to Avoid Distraction and Stay Focused During Video Calls?</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
+                  </div>
+
+                  <div class="post-entry-1 border-bottom">
+                    <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
+                  </div>
+
+                  <div class="post-entry-1 border-bottom">
+                    <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">9 Half-up/half-down Hairstyles for Long and Medium Hair</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
+                  </div>
+
+                  <div class="post-entry-1 border-bottom">
+                    <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy: A Working Mom’s Guide</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
+                  </div>
+
+                  <div class="post-entry-1 border-bottom">
+                    <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">The Best Homemade Masks for Face (keep the Pimples Away)</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
+                  </div>
+
+                  <div class="post-entry-1 border-bottom">
+                    <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every Working Mom Should Know</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
+                  </div>
+                </div> 
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-legal">
+      <div class="container">
+
+        <div class="row justify-content-between">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <div class="credits"> GEDE SURANADI</a> </div>
+
+          </div>
+
+          <div class="col-md-6">
+            <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
