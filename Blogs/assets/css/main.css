@@ -26,6 +26,7 @@ a {
 
 p {
   text-align: justify;
+  font-size: large;
 }
 
 a:hover {
@@ -40,6 +41,11 @@ h4,
 h5,
 h6 {
   font-family: var(--font-primary);
+}
+
+ol li {
+  text-align: justify;
+  font-size: large;
 }
 
 #main {
